@@ -1,0 +1,197 @@
+:root {
+    --backgroundLitur:black;
+    --stafaLitur: white;
+}
+
+*{
+    transition: .25s;
+}
+
+body {
+    background-color: var(--backgroundLitur);
+    color: var(--stafaLitur);
+    font-family: monospace;
+    font-size: 16px;
+
+}
+
+main {
+    /* padding-top: 5em; */
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+    grid-auto-flow: dense;
+    gap: 1em;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+}
+
+p {
+    margin: 10px;
+    text-align: center;
+}
+
+h1 {
+    grid-column: span 10;
+    text-align: center;
+}
+
+.container {
+    grid-column: 4/8;
+    height: 300px;
+    border: 3px solid var(--stafaLitur);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.byrja {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    gap: 0.5em;
+    justify-content: center;
+    align-items: center;
+}
+
+.umferdir {
+    display: none;
+    height: 100%;
+    flex-direction: column;
+    gap: 0.5em;
+    justify-content: center;
+    align-items: center;
+}
+
+ul {
+    padding: 0;
+}
+
+.umferdir li {
+    list-style: none;
+    display: inline;
+}
+
+.sbs {
+    display: none;
+    height: 100%;
+    flex-direction: column;
+    gap: 0.5em;
+    justify-content: center;
+    align-items: center;
+}
+
+.sbs-takkar {
+    display: flex;
+    gap: 1em;
+}
+
+.skaeri, .steinn, .blad {
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.nidurstada {
+    display: none;
+    height: 100%;
+    flex-direction: column;
+    gap: 0.5em;
+    justify-content: center;
+    align-items: center;
+}
+
+.heildarstats {
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+    height: 100%;
+    grid-column: 2/4
+}
+
+.heildarstats p {
+    text-align: end;
+}
+
+.scoreboard-title {
+    grid-column: 7/9;
+}
+.scoreboard {
+    height: 100%;
+    grid-column: 8/10;
+    /* grid-row: 1/9; */
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.scoreboard p {
+    margin: .25em 0;
+    text-align: left;
+}
+
+#naesta {
+    display: none;
+}
+
+#aftur {
+    display: none;
+}
+
+button {
+    font-family: monospace;
+    font-size: 1.5em;
+    border: 2px solid var(--stafaLitur);
+    border-radius: 0.5em;
+    background: var(--backgroundLitur);
+    padding: 10px;
+    color: var(--stafaLitur);
+    cursor: pointer;
+    transition: 0.15s;
+}
+
+#ljos {
+    position: absolute;
+    right: 1em;
+    top: 1em;
+}
+
+button:hover, button:focus {
+    background: var(--stafaLitur);
+    color: var(--backgroundLitur);
+}
+
+@media only screen and (max-width: 900px) {
+    main {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .container {
+        width: 90%;
+        /* grid-column: auto; */
+        margin: 1em;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .heildarstats p, .scoreboard p {
+        text-align: center;
+    }
+
+
+    #ljos {
+        position: static;
+    }
+
+    *{
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    img {display: none;}
+}

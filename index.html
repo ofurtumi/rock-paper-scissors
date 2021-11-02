@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skæri Blað Steinn</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <main>
+        <button id="ljos">Ljós</button>
+        <h1>blað, skæri, steinn</h1>
+        <div class="container">
+            <div class="byrja">
+                <button id="startButton">Hefja leik</button>
+            </div>
+            <div class="umferdir">
+                <h2>Best af hversu mörgum leikjum?</h2>
+                <ul>
+                    <li><button id="f1" value="1">1</button></li>
+                    <li><button id="f2" value="3">3</button></li>
+                    <li><button id="f3" value="5">5</button></li>
+                    <li><button id="f4" value="7">7</button></li>
+                    <li><button id="f5" value="9">9</button></li>
+                </ul>
+            </div>
+            <div class="sbs">
+                <h2>Hvað setur þú út?</h2>
+                <div class="sbs-takkar">
+                    <div class="skaeri">
+                        <img src="images/Skaeri.png" alt="">
+                        <button id="sbs1">Skæri</button>
+                    </div>
+                    <div class="blad">
+                        <img src="images/pappir.png" alt="">
+                        <button id="sbs2">Blað</button>
+                    </div>
+                    <div class="steinn">
+                        <img src="images/Steinn.png" alt="">
+                        <button id="sbs3">Stein</button>
+                    </div>
+                </div>
+            </div>
+            <div class="nidurstada">
+                <h2 id="umferdAf"></h2>
+                <p>Þú settir út <span id="playerHand"></span>, tölva setti út <span id="compHand"></span></p>
+                <p id="winner"></p>
+                <p>Staðan er <span id="stada"></span></p>
+                <button id="naesta">Næsta umferð</button>
+                <button id="aftur">Nýr leikur</button>
+            </div>
+        </div>
+        <div class="heildarstats">
+            <h2>Sigrar og töp:</h2>
+            <p>Unnir leikir: <span id="hWins">0 (0%)</span></p>
+            <p>Tapaðir leikir: <span id="hLosses">0 (0%)</span></p>
+        </div>
+        <div class="scoreboard">
+            <h2>Útkoma úr leikjum:</h2>
+        </div>
+    </main>
+</body>
+<script type="module" src="script.js"></script>
+</html>
